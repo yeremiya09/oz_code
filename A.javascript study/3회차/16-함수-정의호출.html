@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 정의하고 호출하기</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        createParagraph()
+        createParagraph()
+        createParagraph()
+        createParagraph()
+        createParagraph()
+
+
+        function createParagraph(){
+            const p = document.createElement("p")
+            p.textContent ="새롭게 만들어진 문단 태그!"
+            document.querySelector("#container").append(p)
+        }
+
+
+        function sayYes(){
+            console.log(1)
+            console.log(2)
+            alert("Yes!")
+        }
+
+        const sayNo = function(){
+            alert("No!")
+            console.log(3)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+*{
+    text-align: center;
+}
+
+html{
+    background-color: aqua;
+    font-size: 16px;
+}
+
+body{
+    width: 640px;
+    margin: auto;
+}
+
+h1{
+    font-size: 48px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+p{
+    font-size: 1.5rem;
+}
