@@ -17,16 +17,18 @@ for rank, item in enumerate(items[:10], 1):
     name = item.select_one('.name').text.strip()
     price = item.select_one('.price-value').text.strip()
     link = item.select_one('.search-product-link')['href']
-    img_src = item.select_one('.search-product-wrap-img')['src']
+    img_tag = item.select_one('.search-product-wrap-img')
     rocket = item.select_one('.badge.rocket')
     print(f'[{rank}]위') 
     print(f"제품명: {name}") 
     print(f'{price}원')
     print(f'link: https://www.coupang.com{link}')
-    if img_src.get("data-img-src"):
-        img_url = img_src.get("data-img-src")
+    print(f'img: {img_tag}')
+
+    if img_tag.get("data-img-src"):
+        img_url = img_tag["data-img-src"]
     else:
-        img_src = img_src.get("src")
+        img_url = img_tag["src"]
     
     print(f'로켓배송: {rocket is not None}')
     if rocket:
