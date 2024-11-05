@@ -29,7 +29,9 @@ for rank, item in enumerate(items[:10], 1):
         img_url = img_tag["data-img-src"]
     else:
         img_url = img_tag["src"]
-    
+    print(f"이미지 링크 : {img_url}")
+    print()
+
     print(f'로켓배송: {rocket is not None}')
     if rocket:
         print('로켓배송 가능')

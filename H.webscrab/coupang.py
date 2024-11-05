@@ -38,6 +38,7 @@ for rank, item in enumerate(items, 1):
     else:
         img_url = f"https:{img_src.get('src')}"
     img_url = img_url.replace("230x230ex", "600x600ex")
+    
     print(f"이미지 링크 : {img_url}")
     print()
 
