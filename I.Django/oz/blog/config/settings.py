@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-91f_0g5)!9hmvtfhhbg)r*nhiknwiioe0&42qn+o%$u233opr("
+SECRET_KEY = "django-insecure-5rx-96spsujcm)vyrgfu0&+^a%^qnkkswd$3y3_s6oa9q9j3u+"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,7 +40,8 @@ DJANGO_APPS = [
 ]
 
 OWNER_APPS = [
-    'bookmark',
+    'blog',
+    'member',
 ]
 
 THIRD_APPS = [
@@ -64,7 +65,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates'],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -131,3 +132,8 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# login,logout
+LOGIN_REDIRECT_URL = "/"
+LOGIN_URL = "/login/"
+LOGOUT_REDIRECT_URL = "/"

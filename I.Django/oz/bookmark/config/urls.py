@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect
-
+from bookmark import views
 
 movie_list = [
     {'title' : '파묘', 'director' : '장재현'},
@@ -87,12 +87,14 @@ def gugu(request, num):
     return render(request, 'gugu.html', context)
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', index),
-    path('book_list/' , book_list),
-    path('book_list/<int:num>/', book),
-    path('language/python/', python),
-    path('language/<str:lang>/', language),
-    path('movie/', movies),
-    path('movie/<int:index>/', movie_detail),
-    path('gugu/<int:num>/', gugu)
+    # path('', index),
+    # path('book_list/' , book_list),
+    # path('book_list/<int:num>/', book),
+    # path('language/python/', python),
+    # path('language/<str:lang>/', language),
+    # path('movie/', movies),
+    # path('movie/<int:index>/', movie_detail),
+    # path('gugu/<int:num>/', gugu)
+    path('bookmark/', views.bookmark_list),
+    path('bookmark/<int:pk>/', views.bookmark_detail),
 ]
